@@ -39,7 +39,7 @@ for item in jobs:
 		print('Зарплата: ' + sal)
 	link = str(item.a.get('href'))
 	print('Ссылка: ' + 'https://belmeta.com' + str(item.a.get('href')))
-	print('\n####################\n')
+	print('\n' + '#'*20 + '\n')
 
 	results.append({
 		'vacansi': vacansi,
@@ -56,7 +56,7 @@ for item in results:
 	f.write(f'Вакансия: {item["vacansi"]}\nКампания: {item["company"]}\nГород: {item["city"]}\n')
 	if item["sal"]:
 		f.write(f'{item["sal"]}\n')
-	f.write(f'Ссылка: https://belmeta.com{item["link"]}\n\n####################\n\n')
+	f.write(f'Ссылка: https://belmeta.com{item["link"]}\n\n' + '#'*20 + '\n\n')
 
 
 now = datetime.now()
